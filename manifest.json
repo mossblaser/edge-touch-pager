@@ -1,0 +1,24 @@
+{
+
+  "manifest_version": 2,
+  "name": "Edge Touch Pager",
+  "version": "0.1",
+
+  "description": "Page up and down by touching the left 5% or right 5% of the screen. Intended to improve reading experience on eink devices.",
+
+  "icons": {
+    "48": "icons/edge-touch-pager-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["edge_touch_pager.js"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "edge_touch_pager@jhnet.co.uk"
+    }
+  }
+}
