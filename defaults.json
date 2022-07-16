@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "edgeButtonsEnabled": true,
+  "keyboardEnabled": true,
+  "buttonWidth": 38,
+  "screenfulUnderscroll": 38,
+  "toEdgeUnderscroll": 18,
+  "longPressDuration": 500,
+  "smooth": false
+}

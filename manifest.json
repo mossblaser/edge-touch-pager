@@ -1,13 +1,21 @@
 {
 
   "manifest_version": 2,
-  "name": "Edge Touch Pager",
-  "version": "0.1",
+  "name": "Edge-Touch Pager",
+  "version": "1.0",
+  "developer": {
+    "name": "Jonathan Heathcote",
+    "url": "https://github.com/mossblaser/edge-touch-pager"
+  },
 
-  "description": "Page up and down by touching the left 5% or right 5% of the screen. Intended to improve reading experience on eink devices.",
+  "description": "Page up and down by touching the left and right edges of the screen. Swipe up or down on screen edges to scroll to the top or bottom of the screen.",
+
+  "permissions": [
+    "storage"
+  ],
 
   "icons": {
-    "48": "icons/edge-touch-pager-48.png"
+    "48": "icons/edge-touch-pager.svg"
   },
 
   "content_scripts": [
@@ -16,6 +24,22 @@
       "js": ["edge_touch_pager.js"]
     }
   ],
+  
+  "background": {
+    "scripts": ["browser_action_handler.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icons/edge-touch-pager.svg",
+    "default_title": "Togle Edge Touch Pager"
+  },
+  
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": false,
+    "open_in_tab": true
+  },
+  
   "browser_specific_settings": {
     "gecko": {
       "id": "edge_touch_pager@jhnet.co.uk"

@@ -1,0 +1,66 @@
+h1 {
+  padding-left: 2em;
+  
+  background-image: url("../icons/edge-touch-pager.svg");
+  background-repeat: none;
+  background-position: left 50%;
+  background-size: contain;
+}
+
+details summary {
+  font-weight: bold;
+}
+
+.edge-size {
+  pointer-events: none;
+  
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  
+  width: 1cm; /* XXX */
+  
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    rgba(80, 80, 80, 0.2) 10px,
+    rgba(80, 80, 80, 0.2) 15px
+  );
+}
+
+.edge-size.left {
+  left: 0;
+}
+.edge-size.right {
+  right: 0;
+}
+
+.underscroll-size {
+  pointer-events: none;
+  
+  position: fixed;
+  left: 0;
+  right: 0;
+  
+  height: 1cm; /* XXX */
+  
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    rgba(80, 80, 80, 0.2) 10px,
+    rgba(80, 80, 80, 0.2) 15px
+  );
+}
+
+.underscroll-size.top {
+  top: 0;
+}
+.underscroll-size.bottom {
+  bottom: 0;
+}
+
+#long-press-test {
+  touch-action: none;
+}

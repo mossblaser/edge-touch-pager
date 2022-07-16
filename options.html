@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Edge Touch Pager Settings</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="css/options.css">
+  </head>
+  <body>
+    <main class="container">
+      <h1>Edge-Touch Pager</h1>
+      
+      <p>Edge-touch pager lets you scroll through web pages by touching the edges
+      of your screen, just like an ebook reader.</p>
+      
+      <article>
+        <p>Edge-touch pager is <strong id="enabled-label">enabled</strong>.</p>
+        
+        <button id="enable-button">Disable edge-touch pager</button>
+        
+        <label><input id="enable-edge-touch" type="checkbox" role="switch">Enable edge-touch areas</label>
+        <label><input id="enable-keyboard" type="checkbox" role="switch">Enhance page-up/down key behaviour</label>
+      </article>
+      
+      <h2>Using edge-touch pager</h2>
+      
+      <p>Tap the right edge of the screen to Scroll down by one screenful. Tap
+      the left edge to scroll up.</p>
+      
+      <p>Swipe up on either edge of the screen to scroll part of the page to the
+      top of the screen. Swipe down to move it to the bottom.</p>
+      
+      <p>Press and hold to click on parts of the page near the edges of the
+      screen instead of scrolling.</p>
+      
+      <h2>Advanced settings</h2>
+      
+      <details>
+        <summary>Edge-touch area width</summary>
+        <p>Use the slider below to adjust the width of the touch-sensitive area
+        on either side of the screen.</p>
+        <input id="touch-width" type="range" min="1" max="114" value="38">
+        <div class="edge-size left"></div>
+        <div class="edge-size right"></div>
+      </details>
+      
+      <details>
+        <summary>Under-scroll</summary>
+        <p>Use the slider below to adjust how much of the previous screenful to
+        keep visible after scrolling. This can help make finding your place
+        again easier.</p>
+        <input id="underscroll" type="range" min="0" max="114" value="38">
+        <div class="underscroll-size top"></div>
+        <div class="underscroll-size bottom"></div>
+      </details>
+      
+      <details>
+        <summary>Long-press duration</summary>
+        <p>Set the duration required for presses to click on parts of a web page
+        in the edge zones.</p>
+        <input id="long-press-duration" type="range" min="100" max="2000" value="500">
+        <button id="long-press-test">Press-and-hold here to test</button>
+      </details>
+      
+      <details>
+        <summary>Smooth scrolling</summary>
+        <p>Choose whether to animate scrolling actions or not. For best results
+        on eInk devices, disable smooth scrolling.</p>
+        <label><input id="smooth-scroll" type="checkbox" role="switch">Enable (animated) smooth scrolling</label>
+      </details>
+      
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>
